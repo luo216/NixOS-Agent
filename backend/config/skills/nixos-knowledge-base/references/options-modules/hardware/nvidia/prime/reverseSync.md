@@ -1,0 +1,11 @@
+---
+module: hardware.nvidia.prime.reverseSync
+option_count: 1
+source: options.html
+---
+
+# hardware.nvidia.prime.reverseSync
+
+## hardware.nvidia.prime.reverseSync.enable
+
+Whether to enable NVIDIA Optimus support using the NVIDIA proprietary driver via reverse PRIME. If enabled, the Intel/AMD GPU will be used for all rendering, while enabling output to displays attached only to the NVIDIA GPU without a multiplexer. Warning: This feature is relatively new, depending on your system this might work poorly. AMD support, especially so. See: https://forums.developer.nvidia.com/t/the-all-new-outputsink-feature-aka-reverse-prime/129828 Note that this option only has any effect if the “nvidia” driver is specified in services.xserver.videoDrivers, and it should preferably be the only driver there. If this is enabled, then the bus IDs of the NVIDIA and Intel/AMD GPUs have to be specified (hardware.nvidia.prime.nvidiaBusId and hardware.nvidia.prime.intelBusId or hardware.nvidia.prime.amdgpuBusId). If you enable this, you may want to also enable kernel modesetting for the NVIDIA driver (hardware.nvidia.modesetting.enable) in order to prevent tearing. Note that this configuration will only be successful when a display manager for which the services.xserver.displayManager.setupCommands option is supported is used . Type: boolean Default: false Example: true Declared by: <nixpkgs/nixos/modules/hardware/video/nvidia.nix>

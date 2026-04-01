@@ -1,0 +1,7 @@
+{
+  "clientId": "planner",
+  "systemPromptRef": "prompts/planner.system.md",
+  "compactPrompt": "Compact this planner thread for continued planning work. Preserve the user's goal, confirmed scope, constraints, accepted decisions, open questions, template/environment fit conclusions, planned-features or AGENTS changes already made, and the exact next clarification or planning step. Omit implementation detail and long conversational restatement. Keep it concise, explicit, and ready for the next planning turn.",
+  "autoCompactTokenLimit": 180000,
+  "updatedAt": "2026-03-30T20:24:22+08:00"
+}

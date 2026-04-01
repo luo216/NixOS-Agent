@@ -1,0 +1,40 @@
+---
+title: "nix store prefetch-file - Nix 2.28.6 Reference Manual"
+source: command-ref/new-cli/nix3-store-prefetch-file.html
+---
+
+# nix store prefetch-file - Nix 2.28.6 Reference Manual
+
+Auto Light Rust Coal Navy Ayu
+
+## Nix 2.28.6 Reference Manual
+
+Warning This program is experimental and its interface is subject to change.
+
+## Name
+
+nix store prefetch-file - download a file into the Nix store
+
+## Synopsis
+
+nix store prefetch-file [option...] url
+
+## Examples
+
+Download a file to the Nix store: # nix store prefetch-file https://releases.nixos.org/nix/nix-2.3.10/nix-2.3.10.tar.xz Downloaded 'https://releases.nixos.org/nix/nix-2.3.10/nix-2.3.10.tar.xz' to '/nix/store/vbdbi42hgnc4h7pyqzp6h2yf77kw93aw-source' (hash 'sha256-qKheVd5D0BervxMDbt+1hnTKE2aRWC8XCAwc0SeHt6s='). Download a file and get the SHA-512 hash: # nix store prefetch-file --json --hash-type sha512 \ https://releases.nixos.org/nix/nix-2.3.10/nix-2.3.10.tar.xz \ | jq -r .hash sha512-6XJxfym0TNH9knxeH4ZOvns6wElFy3uahunl2hJgovACCMEMXSy42s69zWVyGJALXTI+86tpDJGlIcAySEKBbA==
+
+## Description
+
+This command downloads the file url to the Nix store. It prints out the resulting store path and the cryptographic hash of the contents of the file. The name component of the store path defaults to the last component of url, but this can be overridden using --name.
+
+## Options
+
+--executable Make the resulting file executable. Note that this causes the resulting hash to be a NAR hash rather than a flat file hash. --expected-hash hash The expected hash of the file. --hash-type hash-algo Hash algorithm (blake3, md5, sha1, sha256, or sha512). --json Produce output in JSON format, suitable for consumption by another program. --name name Override the name component of the resulting store path. It defaults to the base name of url. --unpack Unpack the archive (which must be a tarball or zip file) and add the result to the Nix store.
+
+### Logging-related options
+
+--debug Set the logging verbosity level to 'debug'. --log-format format Set the format of log output; one of raw, internal-json, bar or bar-with-logs. --print-build-logs / -L Print full build logs on standard error. --quiet Decrease the logging verbosity level. --verbose / -v Increase the logging verbosity level.
+
+### Miscellaneous global options
+
+--help Show usage information. --offline Disable substituters and consider all previously downloaded files up-to-date. --option name value Set the Nix configuration setting name to value (overriding nix.conf). --refresh Consider all previously downloaded files out-of-date. --version Show version information. Note See man nix.conf for overriding configuration settings with command line flags.

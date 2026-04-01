@@ -1,0 +1,40 @@
+{
+  "name": "Project Features",
+  "readme": {
+    "schema": {
+      "root": [
+        "name",
+        "readme",
+        "features"
+      ],
+      "featureFields": [
+        "id",
+        "title",
+        "description",
+        "acceptance",
+        "dependsOn",
+        "status"
+      ],
+      "statusEnum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "failed",
+        "blocked",
+        "skipped"
+      ],
+      "dependsOn": "Use feature ids only.",
+      "acceptance": "Use a string array.",
+      "testingAndDeployment": "Record the agreed testing strategy and deployment arrangement in readme.projectSummary. If testing, rollout, or deployment needs explicit execution sequencing, add dedicated features for them."
+    },
+    "projectSummary": {
+      "goal": "",
+      "scope": [],
+      "constraints": [],
+      "testingStrategy": [],
+      "deploymentPlan": [],
+      "notes": []
+    }
+  },
+  "features": []
+}

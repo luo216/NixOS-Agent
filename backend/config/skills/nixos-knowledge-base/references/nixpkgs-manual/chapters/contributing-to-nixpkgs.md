@@ -1,0 +1,224 @@
+---
+title: "Contributing to Nixpkgs"
+source: index.html
+---
+
+# Contributing to Nixpkgs
+
+Table of Contents Quick Start to Adding a Package Coding conventions Submitting changes Vulnerability Roundup Reviewing contributions Contributing to Nixpkgs documentation
+
+### Quick Start to Adding a Package
+
+This section has been moved to pkgs/README.md.
+
+### Coding conventions
+
+Table of Contents Syntax Package naming File naming and organisation Fetching Sources Obtaining source hash Patches Package tests This section has been moved to CONTRIBUTING.md.
+
+### Syntax
+
+This section has been moved to CONTRIBUTING.md.
+
+### Package naming
+
+This section has been moved to pkgs/README.md.
+
+### File naming and organisation
+
+Versioning This section has been moved to CONTRIBUTING.md.
+
+#### Versioning
+
+This section has been moved to pkgs/README.md.
+
+### Fetching Sources
+
+This section has been moved to pkgs/README.md.
+
+### Obtaining source hash
+
+Obtaining hashes securely This section has been moved to pkgs/README.md.
+
+#### Obtaining hashes securely
+
+This section has been moved to pkgs/README.md.
+
+### Patches
+
+This section has been moved to pkgs/README.md.
+
+### Package tests
+
+Writing inline package tests Writing larger package tests Running package tests Examples of package tests Linking NixOS module tests to a package Import From Derivation This section has been moved to pkgs/README.md.
+
+#### Writing inline package tests
+
+This section has been moved to pkgs/README.md.
+
+#### Writing larger package tests
+
+This section has been moved to pkgs/README.md.
+
+#### Running package tests
+
+This section has been moved to pkgs/README.md.
+
+#### Examples of package tests
+
+This section has been moved to pkgs/README.md.
+
+#### Linking NixOS module tests to a package
+
+This section has been moved to pkgs/README.md.
+
+#### Import From Derivation
+
+This section has been moved to pkgs/README.md.
+
+### Submitting changes
+
+Table of Contents Submitting changes Submitting security fixes Deprecating/removing packages Pull Request Template Hotfixing pull requests Commit policy This section has been moved to CONTRIBUTING.md.
+
+### Submitting changes
+
+This section has been moved to CONTRIBUTING.md.
+
+### Submitting security fixes
+
+This section has been moved to pkgs/README.md.
+
+### Deprecating/removing packages
+
+Steps to remove a package from Nixpkgs This section has been moved to pkgs/README.md.
+
+#### Steps to remove a package from Nixpkgs
+
+This section has been moved to pkgs/README.md.
+
+### Pull Request Template
+
+Tested using sandboxing Built on platform(s) Tested via one or more NixOS test(s) if existing and applicable for the change (look inside nixos/tests) Tested compilation of all pkgs that depend on this change using nixpkgs-review Tested execution of all binary files (usually in ./result/bin/) Meets Nixpkgs contribution standards This section has been moved to CONTRIBUTING.md.
+
+#### Tested using sandboxing
+
+This section has been moved to CONTRIBUTING.md.
+
+#### Built on platform(s)
+
+This section has been moved to CONTRIBUTING.md.
+
+#### Tested via one or more NixOS test(s) if existing and applicable for the change (look inside nixos/tests)
+
+This section has been moved to CONTRIBUTING.md.
+
+#### Tested compilation of all pkgs that depend on this change using nixpkgs-review
+
+This section has been moved to CONTRIBUTING.md.
+
+#### Tested execution of all binary files (usually in ./result/bin/)
+
+This section has been moved to CONTRIBUTING.md.
+
+#### Meets Nixpkgs contribution standards
+
+This section has been moved to CONTRIBUTING.md.
+
+### Hotfixing pull requests
+
+This section has been moved to CONTRIBUTING.md.
+
+### Commit policy
+
+Branches This section has been moved to CONTRIBUTING.md.
+
+#### Branches
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Master branch
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Staging branch
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Staging-next branch
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Stable release branches
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Automatically backporting a Pull Request
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Manually backporting changes
+
+This section has been moved to CONTRIBUTING.md.
+
+##### Acceptable backport criteria
+
+This section has been moved to CONTRIBUTING.md.
+
+### Vulnerability Roundup
+
+Table of Contents Issues Triaging and Fixing This section has been moved to pkgs/README.md.
+
+### Issues
+
+This section has been moved to pkgs/README.md.
+
+### Triaging and Fixing
+
+This section has been moved to pkgs/README.md.
+
+### Reviewing contributions
+
+Table of Contents Package updates New packages Module updates New modules Individual maintainer list Maintainer teams Other submissions Merging pull requests This section has been moved to CONTRIBUTING.md.
+
+### Package updates
+
+This section has been moved to pkgs/README.md.
+
+### New packages
+
+This section has been moved to pkgs/README.md.
+
+### Module updates
+
+This section has been moved to nixos/README.md.
+
+### New modules
+
+This section has been moved to nixos/README.md.
+
+### Individual maintainer list
+
+This section has been moved to maintainers/README.md.
+
+### Maintainer teams
+
+This section has been moved to maintainers/README.md.
+
+### Other submissions
+
+This section has been moved to CONTRIBUTING.md.
+
+### Merging pull requests
+
+This section has been moved to CONTRIBUTING.md.
+
+### Contributing to Nixpkgs documentation
+
+Table of Contents devmode Syntax This section has been moved to doc/README.md.
+
+### devmode
+
+This section has been moved to doc/README.md.
+
+### Syntax
+
+This section has been moved to doc/README.md.

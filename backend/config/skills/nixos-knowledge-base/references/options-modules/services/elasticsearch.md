@@ -1,0 +1,63 @@
+---
+module: services.elasticsearch
+option_count: 14
+source: options.html
+---
+
+# services.elasticsearch
+
+## services.elasticsearch.enable
+
+Whether to enable elasticsearch. Type: boolean Default: false Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.package
+
+The elasticsearch package to use. Type: package Default: pkgs.elasticsearch Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.cluster_name
+
+Elasticsearch name that identifies your cluster for auto-discovery. Type: string Default: "elasticsearch" Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.dataDir
+
+Data directory for elasticsearch. Type: absolute path Default: "/var/lib/elasticsearch" Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.extraCmdLineOptions
+
+Extra command line options for the elasticsearch launcher. Type: list of string Default: [ ] Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.extraConf
+
+Extra configuration for elasticsearch. Type: string Default: "" Example: '' node.name: "elasticsearch" node.master: true node.data: false '' Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.extraJavaOptions
+
+Extra command line options for Java. Type: list of string Default: [ ] Example: [ "-Djava.net.preferIPv4Stack=true" ] Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.listenAddress
+
+Elasticsearch listen address. Type: string Default: "127.0.0.1" Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.logging
+
+Elasticsearch logging configuration. Type: string Default: '' logger.action.name = org.elasticsearch.action logger.action.level = info appender.console.type = Console appender.console.name = console appender.console.layout.type = PatternLayout appender.console.layout.pattern = [%d{ISO8601}][%-5p][%-25c{1.}] %marker%m%n rootLogger.level = info rootLogger.appenderRef.console.ref = console '' Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.plugins
+
+Extra elasticsearch plugins Type: list of package Default: [ ] Example: [ pkgs.elasticsearchPlugins.discovery-ec2 ] Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.port
+
+Elasticsearch port to listen for HTTP traffic. Type: 16 bit unsigned integer; between 0 and 65535 (both inclusive) Default: 9200 Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.restartIfChanged
+
+Automatically restart the service on config change. This can be set to false to defer restarts on a server or cluster. Please consider the security implications of inadvertently running an older version, and the possibility of unexpected behavior caused by inconsistent versions across a cluster when disabling this option. Type: boolean Default: true Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.single_node
+
+Start a single-node cluster Type: boolean Default: true Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>
+
+## services.elasticsearch.tcp_port
+
+Elasticsearch port for the node to node communication. Type: 16 bit unsigned integer; between 0 and 65535 (both inclusive) Default: 9300 Declared by: <nixpkgs/nixos/modules/services/search/elasticsearch.nix>

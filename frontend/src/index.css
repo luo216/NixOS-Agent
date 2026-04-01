@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+}
+
+[data-message-card="true"] {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+[data-message-card="true"] pre,
+[data-message-card="true"] code {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Global scrollbar styling (dark GitHub-like palette) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3b4452 #0d1117;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b4452 0%, #2f3742 100%);
+  border: 2px solid #0d1117;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4b5567 0%, #3b4452 100%);
+}
+
+*::-webkit-scrollbar-corner {
+  background: #0d1117;
+}

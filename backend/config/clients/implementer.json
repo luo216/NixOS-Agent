@@ -1,0 +1,7 @@
+{
+  "clientId": "implementer",
+  "systemPromptRef": "prompts/implementer.system.md",
+  "compactPrompt": "Compact this implementer thread for continued feature delivery. Preserve the current feature id and status, dependency state, files already changed, validations already run, results that matter, blockers, worker handoffs and their outcomes, and the exact next implementation step. Keep code-level facts and repo state, but omit repeated narration and low-signal logs.",
+  "autoCompactTokenLimit": 120000,
+  "updatedAt": "2026-03-30T20:24:22+08:00"
+}

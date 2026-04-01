@@ -1,0 +1,7 @@
+{
+  "clientId": "worker",
+  "systemPromptRef": "prompts/worker.system.md",
+  "compactPrompt": "Compact this worker thread for continued command supervision. Preserve the assigned task, current status, tmux session name, remote host or shell context if any, commands already run, the key observed outputs or failures, what the worker is waiting on, and the exact next command or check to perform. Drop verbose command output and keep only actionable facts needed to resume execution safely.",
+  "autoCompactTokenLimit": 80000,
+  "updatedAt": "2026-03-30T20:24:22+08:00"
+}

@@ -1,0 +1,35 @@
+---
+module: programs.captive-browser
+option_count: 7
+source: options.html
+---
+
+# programs.captive-browser
+
+## programs.captive-browser.enable
+
+Whether to enable captive browser, a dedicated Chrome instance to log into captive portals without messing with DNS settings. Type: boolean Default: false Example: true Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.package
+
+The captive-browser package to use. Type: package Default: pkgs.captive-browser Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.bindInterface
+
+Binds captive-browser to the network interface declared in cfg.interface. This can be used to avoid collisions with private subnets. Type: boolean Default: true Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.browser
+
+The shell (/bin/sh) command executed once the proxy starts. When browser exits, the proxy exits. An extra env var PROXY is available. Here, we use a separate Chrome instance in Incognito mode, so that it can run (and be waited for) alongside the default one, and that it maintains no state across runs. To configure this browser open a normal window in it, settings will be preserved. @volth: chromium is to open a plain HTTP (not HTTPS nor redirect to HTTPS!) website. upstream uses http://example.com but I have seen captive portals whose DNS server resolves “example.com” to 127.0.0.1 Type: string Default: env XDG_CONFIG_HOME="$PREV_CONFIG_HOME" ${pkgs.chromium}/bin/chromium --user-data-dir=${XDG_DATA_HOME:-$HOME/.local/share}/chromium-captive --proxy-server="socks5://$PROXY" --host-resolver-rules="MAP * ~NOTFOUND , EXCLUDE localhost" --no-first-run --new-window --incognito -no-default-browser-check http://cache.nixos.org/ Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.dhcp-dns
+
+The shell (/bin/sh) command executed to obtain the DHCP DNS server address. The first match of an IPv4 regex is used. IPv4 only, because let’s be real, it’s a captive portal. Type: string Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.interface
+
+your public network interface (wlp3s0, wlan0, eth0, …) Type: string Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
+
+## programs.captive-browser.socks5-addr
+
+the listen address for the SOCKS5 proxy server Type: string Default: "localhost:1666" Declared by: <nixpkgs/nixos/modules/programs/captive-browser.nix>
